@@ -66,7 +66,7 @@ def get_count(log: list, value: str) -> dict:
 
 
 def get_longest_requests(log: list) -> list:
-    sorted_log = sorted(log, key=lambda x: x['request_duration'], reverse=True)
+    sorted_log = sorted(log, key=lambda x: int(x['request_duration']), reverse=True)
     print(f'Finished sorting by duration')
     return sorted_log[:3]
 
